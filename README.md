@@ -2,6 +2,8 @@
 
 This folder contains a small local exporter for agent session JSONL files.
 
+Live app: https://honghua.github.io/agent-jsonl-export/
+
 ## Web UI
 
 Open `index.html` in a browser to use the local viewer:
