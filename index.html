@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agent JSONL Viewer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">AJ</span>
+      <div>
+        <h1>Agent JSONL Viewer</h1>
+        <p id="status">Open or drop JSONL sessions</p>
+      </div>
+    </div>
+    <div class="actions">
+      <input id="file-input" type="file" accept=".jsonl,.json,application/json" multiple>
+      <button id="open-button" type="button" title="Import JSONL files">Import</button>
+      <button id="export-button" type="button" title="Export current session as HTML" disabled>Export HTML</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <div id="drop-zone" class="drop-zone">
+        <strong>Drop JSONL files</strong>
+        <span>Claude, Codex, Pi, OpenClaw, Hermes, or generic agent traces</span>
+      </div>
+      <div class="sidebar-tools">
+        <input id="session-search" type="search" placeholder="Search sessions">
+      </div>
+      <div id="session-list" class="session-list"></div>
+    </aside>
+
+    <section class="workspace">
+      <section id="empty-state" class="empty-state">
+        <h2>No session loaded</h2>
+        <p>Import a JSONL file to render the conversation locally.</p>
+      </section>
+
+      <section id="viewer" class="viewer hidden">
+        <div class="session-header">
+          <div>
+            <div id="harness-pill" class="pill">generic</div>
+            <h2 id="session-title"></h2>
+          </div>
+          <dl id="session-meta"></dl>
+        </div>
+
+        <div class="toolbar">
+          <input id="message-search" type="search" placeholder="Search messages">
+          <select id="role-filter" title="Filter role">
+            <option value="all">All roles</option>
+          </select>
+          <label class="checkbox">
+            <input id="raw-toggle" type="checkbox">
+            <span>Raw JSON</span>
+          </label>
+        </div>
+
+        <div id="message-list" class="message-list"></div>
+      </section>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

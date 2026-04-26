@@ -2,6 +2,19 @@
 
 This folder contains a small local exporter for agent session JSONL files.
 
+## Web UI
+
+Open `index.html` in a browser to use the local viewer:
+
+- Import one or more `.jsonl` files.
+- Drag and drop JSONL files onto the left panel.
+- Search sessions and messages.
+- Filter by role.
+- Toggle raw JSON blocks.
+- Export the currently selected session as a standalone HTML file.
+
+All parsing happens in the browser. Files are not uploaded.
+
 ## What I found
 
 - Claude Code sessions: `~/.claude/projects/**/*.jsonl`
