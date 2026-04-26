@@ -2,6 +2,8 @@
 
 Live app: https://honghua.github.io/agent-jsonl-export/
 
+![Agent JSONL Viewer screenshot](docs/screenshot.png)
+
 A local-first viewer for agent session JSONL files from Claude, Codex, Pi Agent, OpenClaw, Hermes, and similar harnesses.
 
 ## Web UI
